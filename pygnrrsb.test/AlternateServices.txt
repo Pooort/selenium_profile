@@ -1,1 +1,0 @@
-http:tesera.ru:80:.:	0	17959	http:tesera.ru:80:tesera.ru:443::n:1551674722:h2:y:1551674658:n::
