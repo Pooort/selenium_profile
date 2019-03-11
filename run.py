@@ -13,8 +13,9 @@ before_temp_dirs = [el for el in os.listdir(TMPDIR) if os.path.isdir(os.path.joi
 
 geckodriver = os.path.join(PROJECTPATH, 'geckodriver')
 driver = webdriver.Firefox(executable_path=geckodriver, firefox_profile=firefox_profile)
-url = 'https://tesera.ru'
+url = 'YOUR SITE HERE'
 driver.get(url)
+raw_input('Wait for authentication...')
 
 # replace current profile with authenticated profile
 after_temp_dirs = [el for el in os.listdir(TMPDIR) if os.path.isdir(os.path.join(TMPDIR, el))]
