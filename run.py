@@ -1,13 +1,15 @@
 import os
-from customdriver import FirefoxProfileDriver
+from customdriver import FirefoxProfileDriver, CustomFirefoxProfile
 
 PROJECTPATH = os.path.dirname(os.path.realpath(__file__))
 
-profile_path = os.path.join(PROJECTPATH, 'clean_profile')
+profile_path = os.path.join(PROJECTPATH, 'test')
 
 geckodriver = os.path.join(PROJECTPATH, 'geckodriver')
 
-driver = FirefoxProfileDriver(executable_path=geckodriver, profile_path=profile_path)
+profile = CustomFirefoxProfile(profile_path)
+
+driver = FirefoxProfileDriver(executable_path=geckodriver, firefox_profile=profile)
 
 url = 'YOUR SITE HERE'
 driver.get(url)
